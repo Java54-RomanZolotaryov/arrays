@@ -1,5 +1,6 @@
 package telran.util.test;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
@@ -31,6 +32,7 @@ class ArraysTests {
 		Integer[] expected = {4, 8, 56, 100, 41, 23, -3, -7};
 		Integer[] numbersCopy = java.util.Arrays.copyOf(numbers, numbers.length);
 		Arrays.bubbleSort(numbersCopy, new EvenOddComparator());
+		assertArrayEquals(expected, numbersCopy);
 	}
 
 }
